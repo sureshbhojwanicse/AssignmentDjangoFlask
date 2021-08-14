@@ -1,4 +1,4 @@
-# Django_user_management
+# Django_user_management and Flask api for second assignment
 
 Deployed on : Django rest api<br/>
 Sample Data used : User Information Open json dataset
@@ -31,3 +31,8 @@ Payload data : {
 3. Load Balancers can be applied for huge traffic
 4. Deeplearning based model can be applied for string based search if there is a text corpus to search
 5. Similarity based algorithms can be used
+
+# How to use second assignment:
+1.Change the paths according to VM or cloud Resource location
+2.Code is in assignment_Api folder
+
