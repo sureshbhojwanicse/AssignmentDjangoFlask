@@ -33,6 +33,6 @@ Payload data : {
 5. Similarity based algorithms can be used
 
 # How to use second assignment:
-1.Change the paths according to VM or cloud Resource location
+1.Change the paths according to VM or cloud Resource location<br/>
 2.Code is in assignment_Api folder
 
