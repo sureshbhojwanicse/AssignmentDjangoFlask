@@ -1,0 +1,36 @@
+from rest_framework.decorators import api_view
+from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
+# Create your views here.
+from django.shortcuts import render
+from .apps import AppConfig
+# Create your views here.
+from django.http import HttpResponse, JsonResponse
+from django.shortcuts import get_object_or_404
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+import json
+
+@csrf_exempt 
+@api_view(['POST'])
+def get(request):
+        print("here")
+        if request.method == 'POST':
+            # sentence is the query we want to get the prediction for
+            # params =  request.GET.get('sentence',None)
+    #           params=request.POST
+            print("here")
+            try:
+                print("now here")
+                params = json.loads(request.body.decode("utf-8"))
+                print("now here")
+            except Exception as e:
+                print(e)
+                return JsonResponse({"Status code": 401, "Status message": "Invalid JSON data"},safe=False)
+            # predict method used to get the prediction
+            response = {" ": "AppConfig.predict(params)"}
+            print("here")
+
+            # returning JSON response
+            return JsonResponse(response,safe=False)
